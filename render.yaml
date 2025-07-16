@@ -1,10 +1,8 @@
-# Trigger redeploy
 services:
- - type: web
-   name: inventory-service
-   runtime: docker
-   buildCommand: "./mvnw clean install"
-   startCommand: "java -jar target/*.jar"
-   envVars: 
-    - key: JAVA_HOME
-      value: /opt/render/project/.java
+  - type: web
+    name: inventory-service
+    buildCommand: "./mvnw clean install"
+    startCommand: "java -jar target/*.jar"
+    envVars:
+      - key: JAVA_HOME
+        value: /opt/render/project/.java
