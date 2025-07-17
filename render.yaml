@@ -1,6 +1,7 @@
 services:
   - type: web
     name: inventory-service
+    plan: free
     buildCommand: "./mvnw clean install"
     startCommand: "java -jar target/*.jar"
     envVars:
